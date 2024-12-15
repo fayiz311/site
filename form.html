@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="icon" href="Image/JoJo'sVentureLogoEnglishDreamcast.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style2.css">
+    <script src="dark.js" defer></script>
+    <script src="form.js" defer></script> 
+</head>
+<body>
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="https://static.jojowiki.com/images/a/a2/latest/20221221172438/JoJo'sVentureLogoEnglishDreamcast.png" alt="Logo JJBA">
+        </a>
+    </div>
+    
+    <button id="dark-mode-toggle">Dark Mode</button>
+    
+    <div class="message-error">
+        <ul></ul>
+    </div>
+    <div class="message-success">
+        Formulaire envoyé !
+    </div>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="pseudo">Pseudo</label>
+            <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo">
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Entrer votre email">
+        </div>
+        <div>
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password" placeholder="Mot de passe">
+        </div>
+
+        <div>
+            <label for="password2">Entrer à nouveau le mot de passe</label>
+            <input type="password2" name="password2" id="password2" placeholder="Confirmer le mot de passe">
+        </div>
+        <div>
+            <label for="Date de Naissance">Date de Naissance</label>
+            <input type="Date de naissance" name="Date de naissance" id="date-de-naissance" placeholder="00/00/0000">
+        </div>
+
+        <button type="submit">S'inscrire</button>
+    </form>
+</body>
+</html>

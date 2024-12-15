@@ -1,0 +1,176 @@
+/* Général - Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(https://static.wikia.nocookie.net/jjba/images/4/4b/AllJoJos.jpg/revision/latest/scale-to-width-down/600?cb=20181003204345&path-prefix=fr);
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Permet un positionnement vertical */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: background-image 0.3s, color 0.3s; /* Ajoute une transition fluide */
+}
+
+/* Conteneur du logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-container a {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(148, 0, 211, 0.7); /* Effet lumineux autour du logo */
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-container a:hover {
+    transform: scale(1.05); /* Légère augmentation de taille au survol */
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px; /* Ajustez la hauteur maximale si nécessaire */
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Formulaire principal */
+form {
+    background-color: #2d2d44; /* Fond violet foncé */
+    border: 2px solid #9400D3; /* Bordure violette éclatante */
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 0 10px rgba(148, 0, 211, 0.7);
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-size: 1rem;
+    color: #FFD700; /* Doré pour le texte des labels */
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #FFD700; /* Bordure dorée */
+    border-radius: 5px;
+    background-color: #3b3b5c; /* Fond sombre pour les champs de saisie */
+    color: #fff;
+    outline: none;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+form input:focus {
+    border-color: #9400D3; /* Couleur violette au focus */
+}
+
+button {
+    background-color: #FFD700; /* Bouton doré */
+    color: #1e1e2f; /* Texte sombre pour contraster */
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #9400D3; /* Violet éclatant au survol */
+    color: #fff;
+}
+
+/* Messages d'erreur et de succès */
+.message-error {
+    background-color: #8B0000; /* Rouge sombre */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: none; /* Par défaut masqué */
+}
+
+.message-error ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.message-success {
+    background-color: #32CD32; /* Vert vif */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: none; /* Par défaut masqué */
+}
+
+/* Mode sombre */
+body.dark-mode {
+    background-image: url('https://static.wikia.nocookie.net/jjba/images/0/08/Site-background-dark/revision/latest/scale-to-width-down/1024?cb=20230103104133');
+    color: #888; /* Texte gris clair pour éviter un contraste trop élevé */
+}
+
+form.dark-mode {
+    background-color: #1a1a2e; /* Fond encore plus sombre */
+    border-color: #4a4a6a;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    color: #888; /* Texte gris clair dans le formulaire */
+}
+
+form.dark-mode label {
+    color: #aaa; /* Labels légèrement plus clairs pour les différencier */
+}
+
+form.dark-mode input {
+    background-color: #2a2a4a; /* Fond sombre */
+    border-color: #666; /* Bordure assombrie */
+    color: #ccc; /* Texte clair dans les champs d'entrée */
+}
+
+form.dark-mode input:focus {
+    border-color: #9400D3; /* Garde le focus violet */
+    color: #fff; /* Texte clair lorsque le champ est en focus */
+}
+
+button.dark-mode {
+    background-color: #4a4a6a; /* Fond sombre du bouton */
+    color: #ccc; /* Texte clair pour le bouton */
+}
+
+button.dark-mode:hover {
+    background-color: #9400D3; /* Violet éclatant au survol */
+    color: #fff; /* Texte blanc au survol */
+}
+
+/* Bouton "S'inscrire" en mode sombre */
+form.dark-mode button[type="submit"] {
+    background-color: #333; /* Fond sombre */
+    color: #ccc; /* Texte clair mais pas blanc pur */
+    border: 2px solid #666; /* Bordure discrète */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transitions fluides */
+}
+
+form.dark-mode button[type="submit"]:hover {
+    background-color: #444; /* Fond légèrement plus clair au survol */
+    color: #fff; /* Texte blanc au survol */
+    border-color: #9400D3; /* Bordure violette au survol */
+}

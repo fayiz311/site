@@ -1,0 +1,377 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+   
+    color: #fff; background-image: url('https://static.wikia.nocookie.net/jjba/images/0/08/Site-background-dark/revision/latest/scale-to-width-down/1024?cb=20230103104133');
+}
+body.dark-mode {
+    color: #ddd;
+    background-color: #181818; /* Couleur de fond pour le mode sombre */
+}
+
+body.dark-mode .contenu-page {
+    background-color: rgba(50, 50, 50, 0.9); /* Fond plus sombre pour la page */
+}
+
+body.dark-mode .header-section {
+    background-color: #333;
+}
+
+body.dark-mode .main-title {
+    background-color: #4b0082;
+    color: #FFD700;
+}
+
+body.dark-mode .search-bar {
+    background: linear-gradient(45deg, #FFD700, #4b0082);
+}
+
+body.dark-mode .jojo-menu nav {
+    background-color: #222;
+}
+
+body.dark-mode .jojo-menu > nav > ul > li a {
+    color: #ddd; /* Texte gris clair dans le menu */
+}
+
+body.dark-mode .jojo-menu > nav > ul > li a:hover {
+    background-color: #007BFF;
+}
+
+body.dark-mode .card-1, body.dark-mode .card-2, body.dark-mode .card-3 {
+    background-color: #333; /* Couleur sombre pour les cartes */
+}
+
+body.dark-mode .butt-stand {
+    background-color: #8b008b;
+}
+
+body.dark-mode .butt-stand:hover {
+    background-color: #9400d3;
+}
+
+body.dark-mode .footer-ar {
+    background-color: #222;
+    color: #ddd;
+}
+
+/* Dark Mode for Buttons */
+body.dark-mode .search-bar button {
+    background-color: #4b0082;
+    color: #fff;
+}
+
+body.dark-mode .dropdown-menu {
+    background-color: #333;
+    border: 1px solid #555;
+}
+
+body.dark-mode .description-stand {
+    background-color: #444;
+}
+
+body.dark-mode .description-stand .text {
+    color: #ddd;
+}
+
+/* Header Section */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px;
+}
+
+/* Left Section: Main Title and Search Bar */
+.left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.main-title {
+    font-family: 'Impact', sans-serif;
+    font-size: 32px;
+    color: #FFD700;
+    background-color: #9400D3;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #FFD700, #9400D3);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 16px;
+    background-color: white;
+    color: #9400D3;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.search-bar button {
+    padding: 10px;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 14px;
+    background-color: #FFD700;
+    color: #4F89BC;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-bar button:hover {
+    background-color: #9400D3;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Right Section: JoJo Menu */
+.jojo-menu {
+    border: 4px solid #9400D3;
+    border-radius: 15px;
+    padding: 15px;
+    background: linear-gradient(45deg, #4F89BC, #FFD700);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    max-width: 300px;
+}
+
+.jojo-menu .menu > li > a {
+    text-decoration: none;
+    color: #FFD700;
+    font-family: 'Impact', sans-serif;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+}
+
+.jojo-menu .menu > li .dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #9400D3;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.jojo-menu .menu > li:hover .dropdown-menu {
+    display: block;
+}
+
+.jojo-menu .menu .dropdown-menu li {
+    padding: 10px;
+    text-align: center;
+}
+
+.jojo-menu .menu .dropdown-menu li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Arial Black', sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+dropdown-open .dropdown-menu {
+    display: block;
+}
+
+.jojo-menu .menu .dropdown-menu li a:hover {
+    color: #FFD700;
+}
+
+/* Main Content Section */
+.contenu-page {
+    padding: 20px;
+    background-color: rgba(195, 150, 36, 0.93);
+    border-radius: 8px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fil-d-ariane h1 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    color: #9457ef;
+    margin-bottom: 50px;
+}
+
+/* Stand Type Section */
+.type-stand {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.type-stand div {
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.type-stand img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10%;
+    transition: transform 0.3s ease;
+}
+
+.type-stand img:hover {
+    transform: scale(1.3);
+}
+
+/* Card Grid */
+.card-1, .card-2, .card-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.carte {
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carte img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carte p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* Buttons */
+.butt-stand {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #8b008b;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.butt-stand:hover {
+    background-color: #9400d3;
+}
+
+/* Footer */
+.footer-ar {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Description Stand Section */
+.description-stand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.description-stand .image {
+    flex: 1;
+    text-align: center;
+}
+
+.description-stand .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.description-stand .text {
+    flex: 2;
+    padding: 10px 20px;
+}
+
+.description-stand .text h2 {
+    font-size: 2rem;
+    color: #9457ef;
+    margin-bottom: 10px;
+}
+
+.description-stand .text p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .description-stand {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .description-stand .text {
+        padding: 0;
+    }
+
+    .card-1, .card-2, .card-3 {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .fil-d-ariane h1 {
+        font-size: 1.2rem;
+    }
+}

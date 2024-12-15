@@ -1,0 +1,157 @@
+/* Général - Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(https://static.wikia.nocookie.net/jjba/images/4/4b/AllJoJos.jpg/revision/latest/scale-to-width-down/600?cb=20181003204345&path-prefix=fr);
+    background-size: cover; /* Pour couvrir toute la page */
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Mode sombre */
+body.dark-mode {
+    background-image: url(https://static.wikia.nocookie.net/jjba/images/0/08/Site-background-dark/revision/latest/scale-to-width-down/1024?cb=20230103104133); /* Supprimer l'image de fond en mode sombre */
+    background-color: #1e1e1e; /* Fond sombre */
+    color: #ccc; /* Texte clair */
+}
+
+/* Logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px; /* Ajustez la hauteur maximale si nécessaire */
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(148, 0, 211, 0.7); /* Effet lumineux */
+}
+
+/* Conteneur principal */
+.battle-container {
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(45, 45, 68, 0.9); /* Fond violet foncé semi-transparent */
+    border: 2px solid #9400D3; /* Bordure violette éclatante */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(148, 0, 211, 0.7); /* Effet lumineux */
+    transition: background-color 0.3s ease;
+}
+
+/* Conteneur principal en mode sombre */
+body.dark-mode .battle-container {
+    background-color: rgba(40, 40, 55, 0.9); /* Fond plus sombre en mode sombre */
+    border: 2px solid #FFD700; /* Bordure dorée */
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.6); /* Effet lumineux doré */
+}
+
+/* Titre principal */
+h1 {
+    font-size: 2.5rem;
+    color: #FFD700; /* Texte doré */
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+/* Titre en mode sombre */
+body.dark-mode h1 {
+    color: #FFD700; /* Garder le texte doré en mode sombre */
+}
+
+/* Personnages */
+.characters {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.character {
+    width: 40%;
+    padding: 10px;
+    background-color: rgba(59, 59, 92, 0.9); /* Violet sombre avec transparence */
+    border-radius: 8px;
+    border: 2px solid #FFD700; /* Bordure dorée */
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.6); /* Effet lumineux doré */
+    transition: background-color 0.3s ease;
+}
+
+/* Personnages en mode sombre */
+body.dark-mode .character {
+    background-color: rgba(45, 45, 68, 0.9); /* Fond plus sombre */
+    border: 2px solid #FFD700; /* Bordure dorée */
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.6); /* Effet lumineux doré */
+}
+
+/* Boutons */
+button {
+    padding: 10px 20px;
+    background-color: #FFD700; /* Bouton doré */
+    border: 2px solid #9400D3; /* Bordure violette */
+    color: #1e1e2f; /* Texte sombre */
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Boutons en mode sombre */
+body.dark-mode button {
+    background-color: #4F4F4F; /* Fond gris plus foncé en mode sombre */
+    color: #FFD700; /* Texte doré */
+    border: 2px solid #FFD700;
+}
+
+/* Journal de combat */
+#battle-log {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(34, 34, 34, 0.9); /* Fond sombre */
+    border-radius: 5px;
+    border: 2px solid #FFD700; /* Bordure dorée */
+    height: 200px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: 1rem;
+    box-shadow: 0px 0px 10px rgba(148, 0, 211, 0.7);
+    color: #fff;
+}
+
+/* Journal de combat en mode sombre */
+body.dark-mode #battle-log {
+    background-color: rgba(0, 0, 0, 0.9); /* Fond encore plus sombre */
+    border: 2px solid #FFD700; /* Bordure dorée */
+}
+
+/* Image des personnages */
+.character-image {
+    width: 100%; /* Ajuste à la largeur du conteneur */
+    max-width: 300px; /* Limite la largeur */
+    height: auto; /* Conserve les proportions */
+    border-radius: 20%; /* Donne une forme arrondie */
+    margin-bottom: 10px; /* Ajoute un espacement entre l'image et le nom */
+    border: 3px solid #FFD700; /* Bordure dorée */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Ombre pour donner du relief */
+}
+
+/* Mode sombre sur les images */
+body.dark-mode .character-image {
+    border: 3px solid #FFD700; /* Garder une bordure dorée */
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.6); /* Effet lumineux doré */
+}
